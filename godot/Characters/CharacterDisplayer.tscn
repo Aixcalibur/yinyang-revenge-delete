@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cpv668ph8f7vp"]
 
-[ext_resource type="Script" path="res://Characters/CharacterDisplayer.gd" id="1"]
+[ext_resource type="Script" uid="uid://ck3vokba22rre" path="res://Characters/CharacterDisplayer.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://bpq0djo0dk6xd" path="res://Characters/Sophia/sophia_neutral.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://bbwr4tu1f2ryy" path="res://Characters/Dani/dani_neutral.png" id="3"]
 

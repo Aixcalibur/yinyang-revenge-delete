@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://c21qbwtg81qug"]
 
 [ext_resource type="PackedScene" uid="uid://c3fdyxa55lvir" path="res://TextBox/TextBox.tscn" id="1"]
-[ext_resource type="Script" path="res://ScenePlayer.gd" id="2"]
+[ext_resource type="Script" uid="uid://bo6ga6oua0md5" path="res://ScenePlayer.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://cpv668ph8f7vp" path="res://Characters/CharacterDisplayer.tscn" id="3"]
 [ext_resource type="Texture2D" uid="uid://dsq2rbfiyycqj" path="res://Backgrounds/dani_bedroom.jpg" id="4"]
 [ext_resource type="Theme" uid="uid://c7cr0spg4jdwa" path="res://Theme/theme.tres" id="6"]
@@ -56,9 +56,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ypy62"]
 _data = {
-"fade_in": SubResource("1"),
-"fade_out": SubResource("2"),
-"setup": SubResource("3")
+&"fade_in": SubResource("1"),
+&"fade_out": SubResource("2"),
+&"setup": SubResource("3")
 }
 
 [node name="ScenePlayer" type="Control"]
@@ -88,6 +88,7 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 anchor_right = 1.0
@@ -97,6 +98,6 @@ color = Color(0, 0, 0, 1)
 
 [node name="FadeAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_ypy62")
+&"": SubResource("AnimationLibrary_ypy62")
 }
 autoplay = "setup"

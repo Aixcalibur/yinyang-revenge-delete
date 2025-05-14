@@ -130,6 +130,7 @@ func tokenize(input_text: String) -> Array[Token]:
 
 	while not script.is_at_end_of_file():
 		var character: String = script.get_current_character()
+		#push_warning(character)
 
 		if character == " ":
 			pass
@@ -172,6 +173,12 @@ func tokenize(input_text: String) -> Array[Token]:
 		# Handle symbols.
 		elif character.is_valid_identifier():
 			tokens.append(_tokenize_symbol(script))
+		elif character == "	":
+			#push_warning("Found Horizontal Tabulation.")
+			pass
+		elif character.unicode_at(0) == 13:
+			#push_warning("Found Carriage Return.")
+			pass
 		else:
 			push_error("Found unidentified character: %s : %s" % [character, character.unicode_at(0)])
 
